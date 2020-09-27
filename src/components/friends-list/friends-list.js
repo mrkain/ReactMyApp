@@ -1,17 +1,24 @@
-import React from "react";
+import React from "react"
+import FriendsListItem from "../friends-list-item/friends-list-item"
 import './friends-list.css'
-import '../friends-list-item/friends-list-item'
 
-const FriendsList = () => {
+
+const FriendsList = ({friends}) => {
+  const elements = friends.map((item) => {
+    const {id, ...itemProps} = item
+    return (
+      <li key={id} className='friends-list'>
+        {<FriendsListItem {...itemProps}/>}
+      </li>
+    )
+  })
+
   return (
-    <ul className='friends-list'>
-      <li>Андрей</li>
-      <li>Егор</li>
-      <li>Алексей</li>
-      <li>Василий</li>
-      <li>Алена</li>
-    </ul>
+      <ul className='friends-list'>
+        {elements}
+      </ul>
   )
+
 }
 
 export default FriendsList
