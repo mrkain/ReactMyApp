@@ -1,3 +1,9 @@
 .friends-list-item {
-    color: #000;
+    color: #000000;
+}
+.friends-list-item-online {
+    width: 10px;
+    height: 10px;
+    background-color: #008000;
+    border-radius: 50%;
 }

@@ -7,6 +7,10 @@ export default class FriendsListItem extends Component {
   render() {
     let classNames = 'friends-list-item'
     const {name} = this.props
+    const {statusOnline} = this.props
+    if(statusOnline) {
+      classNames += ' friends-list-item-online'
+    }
     return (
 
       <div className={classNames}>
