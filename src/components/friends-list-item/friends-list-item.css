@@ -1,9 +1,31 @@
 .friends-list-item {
     color: #000000;
+    font-weight: 700;
 }
+
+.friends-list-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .friends-list-item-online {
-    width: 10px;
-    height: 10px;
-    background-color: #008000;
+    width: 8px;
+    height: 8px;
+    background-color: mediumseagreen;
     border-radius: 50%;
+    display: inline-block;
+}
+
+.friends-list-item-offline {
+    width: 8px;
+    height: 8px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.friends-list-item-avatar {
+    border-radius: 50%;
+    width: 30px;
 }
