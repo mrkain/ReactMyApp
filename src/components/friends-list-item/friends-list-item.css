@@ -1,6 +1,11 @@
 .friends-list-item {
     color: #000000;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.friends-list-item:hover {
+    color: red;
 }
 
 .friends-list-items {
@@ -10,22 +15,25 @@
 }
 
 .friends-list-item-online {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: mediumseagreen;
     border-radius: 50%;
     display: inline-block;
+    cursor: pointer;
 }
 
 .friends-list-item-offline {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: lightgray;
     border-radius: 50%;
     display: inline-block;
+    cursor: pointer;
 }
 
 .friends-list-item-avatar {
     border-radius: 50%;
-    width: 30px;
+    width: 55px;
+    height: 55px;
 }

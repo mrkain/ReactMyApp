@@ -4,11 +4,25 @@ import FriendsList from "../friends-list/friends-list";
 
 export default class FriendsListItem extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      statusOnline: false
+    }
+    this.OnStatusOnline = this.OnStatusOnline.bind(this)
+  }
+
+  OnStatusOnline() {
+    this.setState(({statusOnline}) => ({
+      statusOnline: !statusOnline
+    }))
+  }
+
   render() {
     let classNames = ''
     const {name} = this.props
-    const {statusOnline} = this.props
     const {avatar} = this.props
+    const {statusOnline} = this.state
     if(statusOnline) {
       classNames += 'friends-list-item-online'
     } else {
@@ -16,13 +30,15 @@ export default class FriendsListItem extends Component {
     }
     return (
       <div className='friends-list-items'>
-        <i className={classNames}></i>
+        <i className={classNames} onClick={this.OnStatusOnline}></i>
         <span className='friends-list-item'>
           {name}
         </span>
-        {avatar}
+        <img className='friends-list-item-avatar' src={avatar}/>
       </div>
     )
   }
 }
+
+
 

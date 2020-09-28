@@ -1,5 +1,9 @@
 .friends-list {
-    max-width: 150px;
+    max-width: 250px;
     background-color: #fff;
     padding: 10px;
+}
+
+.friends-list + .friends-list {
+    border-top: 1px solid #000;
 }
