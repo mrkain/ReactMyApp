@@ -20,7 +20,7 @@ export default class FriendsListItem extends Component {
 
   render() {
     let classNames = ''
-    const {name} = this.props
+    const {name, onDelete} = this.props
     const {avatar} = this.props
     const {statusOnline} = this.state
     if(statusOnline) {
@@ -35,6 +35,12 @@ export default class FriendsListItem extends Component {
           {name}
         </span>
         <img className='friends-list-item-avatar' src={avatar}/>
+        <button
+            type='button'
+            className=''
+            onClick={onDelete}>
+          <i className='fa fa-trash-o'></i>
+        </button>
       </div>
     )
   }
