@@ -2,6 +2,8 @@
     color: #000000;
     font-weight: 700;
     cursor: pointer;
+    width: 100px;
+    text-align: center;
 }
 
 .friends-list-item:hover {
@@ -21,6 +23,7 @@
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    margin: 0 5px 0 5px;
 }
 
 .friends-list-item-offline {
@@ -30,10 +33,16 @@
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    margin: 0 5px 0 5px;
 }
 
 .friends-list-item-avatar {
     border-radius: 50%;
     width: 55px;
     height: 55px;
+    margin: 0 20px 0 20px;
+}
+
+.friends-list-item-btn {
+    margin: 0 10px 0 10px;
 }

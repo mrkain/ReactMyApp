@@ -37,7 +37,7 @@ export default class FriendsListItem extends Component {
         <img className='friends-list-item-avatar' src={avatar}/>
         <button
             type='button'
-            className=''
+            className='friends-list-item-btn'
             onClick={onDelete}>
           <i className='fa fa-trash-o'></i>
         </button>
