@@ -4,6 +4,10 @@ import './friends-add-form.css'
 export default class FriendsAddForm extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      name: '',
+      avatar: ''
+    }
     this.onValueChangeName = this.onValueChangeName.bind(this)
     this.onValueChangeAvatar = this.onValueChangeAvatar.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
