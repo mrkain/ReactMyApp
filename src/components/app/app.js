@@ -1,6 +1,7 @@
-import React, {Component} from "react";
+import React, {Component} from "react"
 import './app.css'
-import FriendsList from "../friends-list/friends-list";
+import FriendsList from "../friends-list/friends-list"
+import FriendsAddForm from "../friends-add-form/friends-add-form"
 
 export default class App extends Component {
 
@@ -18,6 +19,24 @@ export default class App extends Component {
       ]
     }
     this.deletItem = this.deletItem.bind(this)
+    this.addFriends = this.addFriends.bind(this)
+
+    this.maxId = 8
+  }
+
+  addFriends(name, avatar) {
+    const newFriendItem = {
+      name: name,
+      avatar: avatar,
+      statusOnline: true,
+      id: this.maxId++
+    }
+    this.setState( ({data}) => {
+      const newArr = [...data, newFriendItem]
+      return {
+        data: newArr
+      }
+    })
   }
 
   deletItem(id) {
@@ -32,12 +51,17 @@ export default class App extends Component {
     })
   }
 
+
+
   render() {
     return (
         <div className='app'>
           <FriendsList
               friends={this.state.data}
               onDelete={this.deletItem}/>
+
+          <FriendsAddForm
+            onAdd={this.addFriends}/>
         </div>
     )
   }

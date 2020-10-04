@@ -7,7 +7,7 @@ export default class FriendsListItem extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      statusOnline: false
+      statusOnline: this.props.statusOnline
     }
     this.OnStatusOnline = this.OnStatusOnline.bind(this)
   }
