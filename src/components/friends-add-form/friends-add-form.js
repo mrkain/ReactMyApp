@@ -40,19 +40,19 @@ export default class FriendsAddForm extends Component {
   render() {
     return (
       <form
-          className='friends-add-form d-flex'
+          className='friends-add-form d-flex flex-column'
           onSubmit={this.onSubmit}>
         <input
           type='text name'
           placeholder='Добавь имя нового друга'
-          className='form-control new-friend-label'
+          className='form-control new-friend-label-name'
           onChange={this.onValueChangeName}
           value={this.state.name}
         />
         <input
           type='text avatar'
           placeholder='Ссылка на аватар'
-          className='form-control new-friend-label'
+          className='form-control new-friend-label-avatar'
           onChange={this.onValueChangeAvatar}
           value={this.state.avatar}
         />

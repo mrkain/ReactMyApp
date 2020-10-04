@@ -1,12 +1,16 @@
 .friends-add-form {
     margin-top: 10px;
-    max-width: 750px;
+    max-width: 450px;
 }
 
 .friends-add-form .new-friend-label {
 
 }
 
-.new-friend-label {
+.new-friend-label-name {
+    margin-bottom: 5px;
+}
 
+.new-friend-label-avatar {
+    margin-bottom: 5px;
 }
